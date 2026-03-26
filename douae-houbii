@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Question 😏</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+      color: white;
+      font-family: Arial;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background: green;
+      color: white;
+    }
+
+    #no {
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wach katbghini? 😳</h1>
+
+  <div class="buttons">
+    <button id="yes">Ah</button>
+    <button id="no">La</button>
+  </div>
+
+  <script>
+    let yesBtn = document.getElementById("yes");
+    let noBtn = document.getElementById("no");
+
+    let size = 18;
+
+    noBtn.addEventListener("click", () => {
+      size += 10;
+      yesBtn.style.fontSize = size + "px";
+      yesBtn.style.padding = (size/2) + "px " + size + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = "<h1>Hta ana kanbghik 😍❤️</h1>";
+    });
+  </script>
+
+</body>
+</html>
